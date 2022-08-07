@@ -1,4 +1,4 @@
-package org.example;
+package org.myproject;
 
 public class MaxElementComparing {
     public static void main(String[] args){
