@@ -8,15 +8,14 @@ public class Patient {
     private String name;
     private int age;
 
-    public Patient() {
-        this.name = "Nikolai";
-        this.age = 80;
+    public Patient(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     public String getName() {
         return name;
     }
-
 
     public int getAge() {
         return age;
@@ -27,17 +26,15 @@ public class Patient {
         return listOfAppointments;
     }
 
-    public void setListOfAppointments() {
-        listOfAppointments = new ArrayList<>();
-         listOfAppointments.add(new Appointment(new Doctor("Aibolit", "therapist"), "flue"));
-         listOfAppointments.add(new Appointment(new Doctor("Hause", "therapist"), "cancer"));
-       }
+    public void setListOfAppointments(List<Appointment> listOfAppointments) {
+        this.listOfAppointments = listOfAppointments;
+    }
 
-       public void printListOfAppointments(){
-        setListOfAppointments();
-        for (int i = 0; i < listOfAppointments.size(); i++){
+    public void gettListOfAppointments() {
+        System.out.println("Appointments:");
+        for (int i = 0; i < listOfAppointments.size(); i++) {
             System.out.println(listOfAppointments.get(i).toString());
         }
-       }
     }
+}
 
